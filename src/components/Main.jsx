@@ -36,7 +36,7 @@ const Main = ({ search }) => {
   }, 4000);
   return (
     <div>
-      <h1 className="m-4">{error}</h1>
+      <h1 className="m-4 error">{error}</h1>
       <div className="card-display">
         <CountryCard countries={countries} />
       </div>

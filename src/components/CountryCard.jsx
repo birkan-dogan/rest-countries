@@ -4,7 +4,7 @@ import { GrCurrency } from "react-icons/gr";
 import { GiEarthAmerica, GiCapitol } from "react-icons/gi";
 
 const CountryCard = ({ countries }) => {
-  console.log(countries);
+  //   console.log(countries);
   return (
     <div className="d-flex w-75 h-50 flex-wrap gap-5 m-5 justify-content-center">
       {countries?.map((item) =>
@@ -19,7 +19,7 @@ const CountryCard = ({ countries }) => {
           } = country;
           return (
             <div className="card" style={{ width: "18rem" }} key={index}>
-              <img src={svg} className="card-img-top flag-img" alt="..." />
+              <img src={svg} className="card-img-top flag-img" alt={common} />
               <div className="card-body">
                 <h5 className="card-title">{common}</h5>
               </div>
