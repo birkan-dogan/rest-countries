@@ -9,7 +9,7 @@ const Search = ({ setSearch }) => {
     setName("");
   };
   return (
-    <form className="input-group m-5 text-center w-25" onSubmit={handleSubmit}>
+    <form className="input-group m-5 text-center w-50" onSubmit={handleSubmit}>
       <input
         type="text"
         className="form-control"
@@ -18,7 +18,7 @@ const Search = ({ setSearch }) => {
         onChange={(e) => setName(e.target.value)}
       />
       <button
-        className="btn btn-outline-secondary bg-danger text-white"
+        className="btn btn-outline-secondary bg-danger text-white w-25"
         type="button"
         id="button-addon2"
       >

@@ -3,7 +3,7 @@ import Main from "../components/Main";
 import Search from "../components/Search";
 
 const Home = () => {
-  const [search, setSearch] = useState();
+  const [search, setSearch] = useState("ukraine");
   return (
     <div>
       <Search setSearch={setSearch} />

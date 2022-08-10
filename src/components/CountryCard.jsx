@@ -1,12 +1,12 @@
 import React from "react";
 import { FaLanguage } from "react-icons/fa";
 import { GrCurrency } from "react-icons/gr";
-import { GiEarthAmerica } from "react-icons/gi";
+import { GiEarthAmerica, GiCapitol } from "react-icons/gi";
 
 const CountryCard = ({ countries }) => {
   console.log(countries);
   return (
-    <div className="d-flex">
+    <div className="d-flex w-75 h-50 flex-wrap gap-5 m-5 justify-content-center">
       {countries?.map((item) =>
         item?.map((country, index) => {
           const {
@@ -15,16 +15,13 @@ const CountryCard = ({ countries }) => {
             region,
             currencies,
             languages,
+            capital,
           } = country;
           return (
             <div className="card" style={{ width: "18rem" }} key={index}>
               <img src={svg} className="card-img-top flag-img" alt="..." />
               <div className="card-body">
                 <h5 className="card-title">{common}</h5>
-                <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
               </div>
               <ul className="list-group list-group-flush">
                 <li className="list-group-item">
@@ -33,6 +30,13 @@ const CountryCard = ({ countries }) => {
                     className="m-2 text-danger"
                   />
                   {Object.values(languages)}
+                </li>
+                <li className="list-group-item">
+                  <GiCapitol
+                    style={{ transform: "scale(1.5)" }}
+                    className="m-2 text-primary"
+                  />
+                  {capital}
                 </li>
                 <li className="list-group-item">
                   <GrCurrency
@@ -51,6 +55,7 @@ const CountryCard = ({ countries }) => {
                   {region}
                 </li>
               </ul>
+
               {/* <div className="card-body">
                 <a href="#" className="card-link">
                   Card link

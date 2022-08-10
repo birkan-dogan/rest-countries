@@ -39,3 +39,11 @@
 .flag-img {
   height: 150px;
 }
+.card-display {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem;
+  /* overflow: hidden; */
+  min-height: 100vh;
+}

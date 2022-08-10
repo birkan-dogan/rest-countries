@@ -36,8 +36,10 @@ const Main = ({ search }) => {
   }, 4000);
   return (
     <div>
-      <h1>{error}</h1>
-      <CountryCard countries={countries} />
+      <h1 className="m-4">{error}</h1>
+      <div className="card-display">
+        <CountryCard countries={countries} />
+      </div>
     </div>
   );
 };
